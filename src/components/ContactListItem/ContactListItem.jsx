@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import css from './ContactListItem.module.css';
 
-const ContactListItem = ({ id, name, number, onDelete }) => {
+const ContactListItem = memo(({ id, name, number, onDelete }) => {
   return (
     <li className={css.item}>
       <span>
@@ -13,7 +13,7 @@ const ContactListItem = ({ id, name, number, onDelete }) => {
       </button>
     </li>
   );
-};
+});
 
 export default ContactListItem;
 
