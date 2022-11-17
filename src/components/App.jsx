@@ -57,16 +57,6 @@ const App = () => {
   };
 
   useEffect(() => {
-    let parsedContacts = [];
-    if (!localStorage.contacts) {
-      localStorage.setItem('contacts', JSON.stringify(contacts));
-    } else {
-      parsedContacts = JSON.parse(localStorage.getItem('contacts'));
-      setContacts(parsedContacts);
-    }
-  }, []);
-
-  useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
 
